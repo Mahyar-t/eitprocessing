@@ -34,6 +34,11 @@ venv3
 # temporary test data
 
 **/test_data/*
+!/test_data/generator.py
+!/test_data/generator_draeger.py
+!/test_data/draeger_synthetic_draeger_20Hz.bin
+!/test_data/draeger_synthetic_draeger_20Hz.png
+
 .helpers/dock_test_data/*
 .helpers/dock_test_add/*
 
