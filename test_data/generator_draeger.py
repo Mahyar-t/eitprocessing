@@ -118,7 +118,7 @@ def generate_realistic_eit_signal(
     # measurement noise
     noise = rng.normal(0, noise_std, size=time_seconds.shape)
 
-    signal = base_impedance + drift + breathing + cardiac + noise
+    signal = base_impedance + breathing + drift #  + noise# + cardiac
     return time_seconds, signal
 
 
@@ -471,8 +471,8 @@ def main() -> None:
     )
     save_path = os.path.join(os.getcwd(), "test_data")
     # Save files
-    bin_path = save_draeger_bin(os.path.join(save_path, "draeger_synthetic_draeger_20Hz.bin"), data)
-    png_path = save_preview_plot(os.path.join(save_path,"draeger_synthetic_draeger_20Hz.png"), data)
+    bin_path = save_draeger_bin(os.path.join(save_path, "draeger_synthetic_draeger_20Hz_base.bin"), data)
+    png_path = save_preview_plot(os.path.join(save_path,"draeger_synthetic_draeger_20Hz_base.png"), data)
 
     # Report
     print(f"Saved binary file: {bin_path}")
