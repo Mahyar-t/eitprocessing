@@ -44,7 +44,7 @@ class ButterworthFilter(TimeDomainFilter):
         >>> signal = np.sin(t) + 0.1 * np.sin(10 * t)
         >>> lowpass_filter = ButterworthFilter(
         ...     filter_type='lowpass',
-        ...     cutoff_frequenct=45,
+        ...     cutoff_frequency=45,
         ...     order=4,
         ...     sample_frequency=250
         ... )
